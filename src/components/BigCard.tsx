@@ -4,7 +4,7 @@ import { urlForImage } from '~/lib/sanity.image'
 import { type Post } from '~/lib/sanity.queries'
 import { formatDate } from '~/utils'
 
-export default function Card({ post }: { post: Post }) {
+export default function BigCard({ post }: { post: Post }) {
   return (
     <div className="card">
       {post.mainImage ? (
@@ -20,7 +20,7 @@ export default function Card({ post }: { post: Post }) {
       )}
       <div className="card__container">
         <h3 className="card__title">
-          <a className="card__link" href={`/post/${post.slug.current}`}>
+          <a className="card__link" href={`/${post.slug.current}`}>
             {post.title}
           </a>
         </h3>
