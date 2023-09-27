@@ -20,6 +20,16 @@ export default defineType({
         maxLength: 96,
       },
     }),
+      defineField({
+          name: 'genre',
+          title: 'Genre',
+          type: 'string',
+          options: {
+              list: ['News', 'Sports', 'Arts', 'Opinions', 'Newton Magazine', 'Multimedia'],
+              layout: 'dropdown',
+          },
+          validation: (Rule) => Rule.required(),
+      }),
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
