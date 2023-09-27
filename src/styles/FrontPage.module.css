@@ -1,0 +1,13 @@
+﻿.side__container {
+  display: grid;
+  
+  justify-content: left;
+  height: fit-content;
+  width: fit-content;
+}
+
+.main__container {
+	display: flex;
+	height: auto;
+	width: 66%
+}
