@@ -28,7 +28,10 @@ export default function BigCard({ post }: { post: Post }) {
                 </h3>
                 <span className={styles.card__title__divider}></span>
                 <p className={styles.card__excerpt }>{post.excerpt}</p>
-                <p className={ styles.card__date}>{formatDate(post._createdAt)}</p>
+                <div className={styles.card__footer}>
+                    <p>{formatDate(post._createdAt)}</p>
+                    <p className={styles.card__read}>Continue to read</p>
+                </div>
             </div>
         </div>
     )

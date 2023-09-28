@@ -16,6 +16,8 @@ import {
 import type { SharedPageProps } from '~/pages/_app'
 import { formatDate } from '~/utils'
 
+import styles from '~/styles/PostPage.module.css'
+
 interface Query {
   [key: string]: string
 }
@@ -52,30 +54,31 @@ export default function ProjectSlugRoute(
   })
 
   return (
-    <Container>
-      <section className="post">
-        {post.mainImage ? (
-          <Image
-            className="post__cover"
-            src={urlForImage(post.mainImage).url()}
-            height={231}
-            width={367}
-            alt=""
-          />
-        ) : (
-          <div className="post__cover--none" />
-        )}
-        <div className="post__container">
-          <h1 className="post__title">{post.title}</h1>
-          <p className="post__excerpt">{post.excerpt}</p>
-          <p className="post__date">{formatDate(post._createdAt)}</p>
-          <div className="post__content">
-            <PortableText value={post.body} />
-          </div>
+  <Container>
+    <section className={styles.post}>
+      {post.mainImage ? (
+        <Image
+          className={styles.post__cover}
+          src={urlForImage(post.mainImage).url()}
+          height={231}
+          width={367}
+          alt=""
+        />
+      ) : (
+        <div className={styles.post__cover_none} />
+      )}
+      <div className={styles.post__container}>
+        <h1 className={styles.post__title}>{post.title}</h1>
+        <p className={styles.post__excerpt}>{post.excerpt}</p>
+        <p className={styles.post__date}>{formatDate(post._createdAt)}</p>
+        <div className={styles.post__content}>
+          <PortableText value={post.body} />
         </div>
-      </section>
-    </Container>
-  )
+      </div>
+    </section>
+  </Container>
+);
+
 }
 
 export const getStaticPaths = async () => {

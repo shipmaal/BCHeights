@@ -29,9 +29,9 @@
 	}
 
 	.card .card__title {
-		font-family: var(--font-family-sans);
-		font-weight: 800;
-		font-size: var(--font-size-7);
+		font-family: var(--font-family-slab);
+		font-weight: 400;
+		font-size: 14px;
 		line-height: var(--line-height-6);
 		letter-spacing: -0.025em;
 		margin: var(--space-3) 0;
@@ -88,20 +88,6 @@
 		border-bottom-right-radius: 3px;
 	}
 
-@media (min-width: 575px) {
-	.card {
-		border: 1px solid #ced2d9;
-		border-bottom: none;
-	}
-
-		.card .card__title {
-			margin-top: var(--space-4);
-		}
-
-		.card:last-child {
-			border-bottom: 1px solid #ced2d9;
-		}
-}
 
 @media (min-width: 800px) {
 	.card {
@@ -114,7 +100,7 @@
 
 		.card .card__cover,
 		.card .card__cover--none {
-			max-width: 150px;
-			max-height: 150px;
+			max-width: 100px;
+			max-height: 100px;
 		}
 }

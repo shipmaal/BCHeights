@@ -40,7 +40,7 @@ export default function IndexPage(
                         )
                     }
                 </div>
-                <div>
+                <div className={styles.first__container}>
                     <BigCard key={posts[0]._id} post={posts[0]} /> 
                 </div>
 

@@ -1,7 +1,7 @@
-import '~/styles/global.scss'
+import '~/styles/global.css'
 
 import type { AppProps } from 'next/app'
-import { IBM_Plex_Mono, Inter, PT_Serif } from 'next/font/google'
+import { IBM_Plex_Mono, Inter, PT_Serif, Arbutus_Slab } from 'next/font/google'
 import { lazy } from 'react'
 
 export interface SharedPageProps {
@@ -30,6 +30,13 @@ const serif = PT_Serif({
   weight: ['400', '700'],
 })
 
+const slab = Arbutus_Slab({
+variable: '--font-family-slab',
+style: ['normal'],
+subsets: ['latin'],
+weight: ['400'],
+})
+
 export default function App({
   Component,
   pageProps,
@@ -43,6 +50,7 @@ export default function App({
             --font-family-sans: ${sans.style.fontFamily};
             --font-family-serif: ${serif.style.fontFamily};
             --font-family-mono: ${mono.style.fontFamily};
+            --font-family-slab: ${slab.style.fontFamily};
           }
         `}
       </style>
