@@ -9,6 +9,8 @@ import styles from '~/styles/cards/SmallCard.module.css'
 export default function BigCard({ post }: { post: Post }) {
     return (
         <div className={styles.card}>
+            <div className={styles.card__header}>
+
             {post.mainImage ? (
                 <Image
                     className={styles.card__cover}
@@ -27,8 +29,15 @@ export default function BigCard({ post }: { post: Post }) {
                     </a>
                 </h3>
                 <span className={styles.card__title__divider}></span>
-                <p className={ styles.card__date}>{formatDate(post._createdAt)}</p>
             </div>
+            </div>
+                <div className={styles.card__footer}>
+                    <p>{formatDate(post._createdAt)}</p>
+                    <p className={styles.card__read}>Continue to read</p>
+            </div>
+
         </div>
+        
+
     )
 }

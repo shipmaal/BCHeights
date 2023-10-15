@@ -1,14 +1,14 @@
 import Link from 'next/link'
+import Header from './Header'
+import headerStyles from '~/styles/Header.module.css'
 
 export default function Container({ children }: { children: React.ReactNode }) {
   return (
     <div className="container">
-      <header className="header">
-        <Link className="header__title" href="/">
-          Next.js + Sanity
-        </Link>
-      </header>
-      <main>{children}</main>
+      <Header>
+      </Header>
+       <main>{children}</main>
+      
     </div>
   )
 }

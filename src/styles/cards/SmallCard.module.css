@@ -1,7 +1,7 @@
-﻿/* BigCard */
+﻿/* SmallCard */
 
 .card {
-	display: flex;
+	display: grid;
 	flex-direction: row;
 	padding: var(--space-2);
 	padding: 9px;
@@ -13,6 +13,13 @@
 
 	.card .card__container {
 		margin: 0 var(--space-1) 0;
+	}
+
+	.card .card__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		align-items: center;
 	}
 
 	.card .card__cover {
@@ -32,17 +39,17 @@
 		font-family: var(--font-family-slab);
 		font-weight: 400;
 		font-size: 14px;
-		line-height: var(--line-height-6);
+		line-height: 14px;
 		letter-spacing: -0.025em;
 		margin: var(--space-3) 0;
-		text-align: center
+		text-align: left
 	}
 
 	.card .card__title__divider {
 		display: block;
 		max-width: 90px;
 		border-top: 2px dotted;
-		margin: 0 auto 15px;
+		text-align: center;
 	}
 
 	.card .card__excerpt {
@@ -58,6 +65,18 @@
 		font-weight: 600;
 		font-family: var(--font-family-sans);
 		font-size: var(--font-size-1);
+		margin-top: calc(var(--space-4) + 7);
+		text-align: left
+	}
+
+	.card .card__footer {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 300;
+		font-family: var(--font-family-serif);
+		font-size: 12px;
+		font-style: italic;
+		color: #AAAAAA;
 		margin-top: calc(var(--space-4) + 7);
 		text-align: left
 	}

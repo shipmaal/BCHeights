@@ -33,19 +33,20 @@ export default function IndexPage(
   const [posts] = useLiveQuery<Post[]>(props.posts, postsQuery)
     return (
         <Container>
-            <section className={styles.main__container}>
-                <div className={styles.side__container}>
-                    {posts.slice(1).map((post, index) =>
-                        <SmallCard key={post._id} post={post} />
-                        )
-                    }
-                </div>
-                <div className={styles.first__container}>
-                    <BigCard key={posts[0]._id} post={posts[0]} /> 
-                </div>
+            
+                <section className={styles.main__container}>
+                    <div className={styles.side__container}>
+                        {posts.slice(1).map((post, index) =>
+                            <SmallCard key={post._id} post={post} />
+                            )
+                        }
+                    </div>
+                    <div className={styles.first__container}>
+                        <BigCard key={posts[0]._id} post={posts[0]} /> 
+                    </div>
 
-          </section>
-
+              </section>
+           
     </Container>
   )
 }
