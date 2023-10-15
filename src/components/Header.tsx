@@ -19,13 +19,13 @@ export default function Header({ children }: { children: React.ReactNode}) {
 				</Link>
 				
 			</div>
-			<nav className={headerStyles.header__nav}>
-				{genres.map((item, index) => (
-					<Link href={`/${item.toLowerCase()}`}>
-						{item}
-					</Link>
-				))}
-			</nav>
+			{/*<nav className={headerStyles.header__nav}>*/}
+			{/*	{genres.map((item, index) => (*/}
+			{/*		<Link href={`/${item.toLowerCase()}`}>*/}
+			{/*			{item}*/}
+			{/*		</Link>*/}
+			{/*	))}*/}
+			{/*</nav>*/}
 		</div>
 	);
 }
